@@ -124,5 +124,9 @@ def load_model_and_predict(model, input_tensor):
     activity_labels = ['Walking', 'Walking', 'Sitting', 'Standing', 'Upstairs', 'Downstairs']
     return activity_labels[pred_class_idx]
 
+# This is only for local development
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run(debug=True)
+
+# Render uses gunicorn to run this: gunicorn app:app
+
